@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<header class="header">
+    <div class="nav-container">
+        <div class="logo_nav">
+            <a href="{{ url_for('home') }}"><img class="logo" alt="logo"
+                                                 src="{{ url_for('static',filename='img/logo.png') }}"></a>
+        </div>
+
+        <div class="bar_menu">
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="{{ url_for('gallery') }}" class="menu_link">Gallery</a>
+                </li>
+                <li class="menu_item">
+                    <a href="{{ url_for('about_me') }}" class="menu_link">About me</a>
+                </li>
+                <li class="menu_item">
+                    <a href="{{ url_for('contact') }}" class="menu_link">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</header>
+
+<div class="enterence">
+    <h1>Welcome to my portfolio!</h1>
+</div>
+
+<div class="content_home">
+    <img src="{{ url_for('static', filename='img/img_2.jpg') }}" alt="" style=" height: 30vh">
+    <div class="text">
+        <h2 style="color: red">Informacja</h2>
+        <p>Ten stronę stworzyłem bez większego wysiłku, ponieważ to zadanie zostało nam przydzielone, abyśmy mogli w
+            praktyce zrozumieć, jak działają różne funkcje.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

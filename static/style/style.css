@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1140px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #3E3E3E;
+}
+
+a:hover {
+    color: #512BE7;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    text-align: center;
+}
+
+
+.header {
+    position: relative;
+    height: 10vh;
+    margin-top: 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    height: 51px;
+    margin-top: 4px;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 250px;
+}
+
+.enterence {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    /*outline: 2px dashed orange;*/
+}
+
+.main_left {
+    width: 40%;
+    max-height: 20%;
+    /*outline: 2px dashed green;*/
+    margin-top: 5%;
+    padding: 20px;
+    background: #DEDEDE;
+}
+
+.main_right {
+    background-image: url("../img/3.png");
+    background-size: cover;
+    width: 40%;
+    max-height: 20%;
+    margin-top: 5%;
+    padding-left: 3%;
+
+    /*outline: 2px dashed red;*/
+}
+
+.content_about_me section {
+    margin-top: 50px;
+    background: #DEDEDE;
+    padding: 20px;
+}
+
+.content_contact section {
+    margin-top: 50px;
+    background: #DEDEDE;
+    padding: 20px;
+}
+
+.content_contact ul {
+    display: flex;
+    padding: 0;
+}
+
+.content_contact ul li {
+    padding-left: 10px;
+}
+
+.content_home {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+    background: #DEDEDE;
+    padding: 10px;
+}
+
+.text {
+    width: 40%;
+    background: #DEDEDE;
+    padding: 10px;
+}

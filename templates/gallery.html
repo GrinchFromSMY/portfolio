@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<header class="header">
+    <div class="nav-container">
+        <div class="logo_nav">
+            <a href="{{url_for('home')}}"><img class="logo" alt="logo" src="{{ url_for('static',filename='img/logo.png') }}"></a>
+        </div>
+
+        <div class="bar_menu">
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="#" class="menu_link">Gallery</a>
+                </li>
+                <li class="menu_item">
+                    <a href="{{url_for('about_me')}}" class="menu_link">About me</a>
+                </li>
+                <li class="menu_item">
+                    <a href="{{url_for('contact')}}" class="menu_link">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</header>
+
+<div class="enterence">
+         <h1 >Welcome to my Gallery!</h1>
+    </div>
+
+
+    <div class="main-container">
+        <div class="main_left left-block">
+            <h1>My new project <br><b>"Anime site"</b></h1>
+            <p>Chcę pokazać ci mój jeszcze bardzo niedopracowany projekt - stronę z anime. Idea polega na oglądaniu dowolnego anime bez reklam i możliwości dodawania go do własnej listy rankingowej (osobistej). Będzie także dostępna zakładka, gdzie będziesz mógł dodawać anime, które chcesz obejrzeć.</p>
+            <a href="#">Try it!</a>
+        </div>
+
+        <div class="main_right right-block">
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

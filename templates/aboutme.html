@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<header class="header">
+    <div class="nav-container">
+        <div class="logo_nav">
+            <a href="{{ url_for('home') }}"><img class="logo" alt="logo"
+                                                 src="{{ url_for('static',filename='img/logo.png') }}"></a>
+        </div>
+
+        <div class="bar_menu">
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="{{ url_for('gallery') }}" class="menu_link">Gallery</a>
+                </li>
+                <li class="menu_item">
+                    <a href="{{ url_for('about_me') }}" class="menu_link">About me</a>
+                </li>
+                <li class="menu_item">
+                    <a href="{{url_for('contact')}}" class="menu_link">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</header>
+
+<div class="enterence">
+    <h1>Welcome to About me!</h1>
+</div>
+<div class="content_about_me">
+    <section>
+        <h2>Introduction</h2>
+        <p>Hello! My name is <span style="font-weight: bold">Danyil</span>, and I am delighted to welcome you to my personal page.</p>
+    </section>
+    <section>
+        <h2>My Education</h2>
+        <p>Currently, I am studying at WSB in the city of Wroclaw. Studying here provides me with numerous opportunities
+            for development and expanding my knowledge in various fields.</p>
+    </section>
+    <section>
+        <h2>My Background</h2>
+        <p>I am originally from Ukraine, a country with a rich culture and history. My background plays an important
+            role in shaping my personality and worldview.</p>
+    </section>
+    <section>
+        <h2>My Interests</h2>
+        <p>For many years, I have been interested in programming, especially in creating parsers. This passion allows me
+            to tackle complex problems and continually grow in this dynamic field.</p>
+    </section>
+    <section>
+        <h2>My Goals</h2>
+        <p>In the future, I strive to become a highly skilled professional in the field of programming. I believe that
+            continuous learning and practice will help me achieve all my professional goals.</p>
+    </section>
+    <section>
+        <h2>Personal Development</h2>
+        <p>Besides studying and programming, I enjoy reading books, traveling, and playing sports. These activities help
+            me maintain a balance between work and personal life.</p>
+    </section>
+    <section>
+        <h2>Conclusion</h2>
+        <p>I am glad you visited my page. If you have any questions or would like to get in touch with me, please go to
+            the <a href="{{ url_for('contact') }}">Contact</a> page.</p>
+    </section>
+</div>
+
+</div>
+</body>
+</html>
