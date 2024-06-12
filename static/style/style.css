@@ -66,7 +66,7 @@ h4 {
 .enterence {
     display: flex;
     justify-content: center;
-
+    margin-bottom: 20px;
 }
 
 
@@ -101,13 +101,13 @@ h4 {
 
 .content_about_me section {
     margin-top: 50px;
-    background: #DEDEDE;
+    background: #F8F9FA;
     padding: 20px;
 }
 
 .content_contact section {
     margin-top: 50px;
-    background: #DEDEDE;
+    background: #F8F9FA;
     padding: 20px;
 }
 
@@ -124,12 +124,17 @@ h4 {
     display: flex;
     margin-top: 30px;
     justify-content: space-around;
-    background: #DEDEDE;
+    background: #F8F9FA;
     padding: 10px;
 }
 
 .text {
     width: 40%;
-    background: #DEDEDE;
+    background: #F8F9FA;
     padding: 10px;
+}
+
+.gallery-item.active {
+  opacity: 0;
+  transform: scale(0.4);
 }

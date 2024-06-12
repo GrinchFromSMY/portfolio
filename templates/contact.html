@@ -1,60 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
-<body>
-<header class="header">
-    <div class="nav-container">
-        <div class="logo_nav">
-            <a href="{{ url_for('home') }}"><img class="logo" alt="logo"
-                                                 src="{{ url_for('static',filename='img/logo.png') }}"></a>
-        </div>
+{% extends "base.html" %}
 
-        <div class="bar_menu">
-            <ul class="menu">
-                <li class="menu_item">
-                    <a href="{{ url_for('gallery') }}" class="menu_link">Gallery</a>
-                </li>
-                <li class="menu_item">
-                    <a href="{{ url_for('about_me') }}" class="menu_link">About me</a>
-                </li>
-                <li class="menu_item">
-                    <a href="{{ url_for('contact') }}" class="menu_link">Contact</a>
-                </li>
+{% block content %}
+
+    <div class="enterence">
+        <h1>Welcome to my Contacts!</h1>
+    </div>
+    <div class="content_contact">
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or would like to get in touch, please use the following contact details:</p>
+        </section>
+        <section>
+            <h2>Email</h2>
+            <p>You can email me</p>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"> Your nickname</label>
+                    <input type="nickname" class="form-control" id="exampleInputPassword1" placeholder="Nickname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                           placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">News</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </form>
+        </section>
+        <section>
+            <h2>Follow Me</h2>
+            <p>Feel free to follow me on my social media profiles:</p>
+            <ul>
+                <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                <li><a href="https://www.instagram.com/yourusername" target="_blank">Instagram</a></li>
             </ul>
-        </div>
-
+        </section>
     </div>
 
-</header>
-
-<div class="enterence">
-    <h1>Welcome to my Contacts!</h1>
-</div>
-<div class="content_contact">
-    <section>
-        <h2>Get in Touch</h2>
-        <p>If you have any questions or would like to get in touch, please use the following contact details:</p>
-    </section>
-    <section>
-        <h2>Email</h2>
-        <p>You can email me at <a href="mailto:example@example.com">example@example.com</a></p>
-    </section>
-    <section>
-        <h2>Follow Me</h2>
-        <p>Feel free to follow me on my social media profiles:</p>
-        <ul>
-            <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-            <li><a href="https://www.instagram.com/yourusername" target="_blank">Instagram</a></li>
-        </ul>
-    </section>
-</div>
-
-
-</div>
-</body>
-</html>
+{% endblock %}

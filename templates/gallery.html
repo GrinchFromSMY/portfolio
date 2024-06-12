@@ -1,45 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
-<body>
-<header class="header">
-    <div class="nav-container">
-        <div class="logo_nav">
-            <a href="{{url_for('home')}}"><img class="logo" alt="logo" src="{{ url_for('static',filename='img/logo.png') }}"></a>
-        </div>
+{% extends "base.html" %}
 
-        <div class="bar_menu">
-            <ul class="menu">
-                <li class="menu_item">
-                    <a href="#" class="menu_link">Gallery</a>
-                </li>
-                <li class="menu_item">
-                    <a href="{{url_for('about_me')}}" class="menu_link">About me</a>
-                </li>
-                <li class="menu_item">
-                    <a href="{{url_for('contact')}}" class="menu_link">Contact</a>
-                </li>
-            </ul>
-        </div>
+{% block content %}
 
+    <div class="enterence">
+        <h1>Welcome to my Gallery!</h1>
     </div>
-
-</header>
-
-<div class="enterence">
-         <h1 >Welcome to my Gallery!</h1>
-    </div>
-
-
     <div class="main-container">
         <div class="main_left left-block">
             <h1>My new project <br><b>"Anime site"</b></h1>
-            <p>Chcę pokazać ci mój jeszcze bardzo niedopracowany projekt - stronę z anime. Idea polega na oglądaniu dowolnego anime bez reklam i możliwości dodawania go do własnej listy rankingowej (osobistej). Będzie także dostępna zakładka, gdzie będziesz mógł dodawać anime, które chcesz obejrzeć.</p>
+            <p>Chcę pokazać ci mój jeszcze bardzo niedopracowany projekt - stronę z anime. Idea polega na oglądaniu
+                dowolnego anime bez reklam i możliwości dodawania go do własnej listy rankingowej (osobistej). Będzie
+                także dostępna zakładka, gdzie będziesz mógł dodawać anime, które chcesz obejrzeć.</p>
             <a href="#">Try it!</a>
         </div>
 
@@ -47,8 +18,39 @@
 
         </div>
     </div>
+    <div class="photo-gallery mt-5">
+
+            <div class="row photos">
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/desk.jpg" data-lightbox="photos"><img
+                        class="img-fluid" src="{{ url_for('static', filename='img/1.png') }}"></a></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item"><a href="{{ url_for('static', filename='img/2.png') }}"
+                                                                data-lightbox="photos"><img class="img-fluid"
+                                                                                            src="{{ url_for('static', filename='img/2.png') }}"></a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/loft.jpg" data-lightbox="photos"><img
+                        class="img-fluid" src="{{ url_for('static', filename='img/3.png') }}"></a></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/building.jpg"
+                                                                data-lightbox="photos"><img class="img-fluid"
+                                                                                            src="{{ url_for('static', filename='img/4.png') }}"></a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/loft.jpg" data-lightbox="photos"><img
+                        class="img-fluid" src="{{ url_for('static', filename='img/5.png') }}"></a></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/desk.jpg" data-lightbox="photos"><img
+                        class="img-fluid" src="{{ url_for('static', filename='img/1.png') }}"></a></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/desk.jpg" data-lightbox="photos"><img
+                        class="img-fluid" src="{{ url_for('static', filename='img/1.png') }}"></a></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/building.jpg"
+                                                                data-lightbox="photos"><img class="img-fluid"
+                                                                                            src="{{ url_for('static', filename='img/2.png') }}"></a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 item mb-4"><a href="assets/img/loft.jpg" data-lightbox="photos"><img
+                        class="img-fluid" src="{{ url_for('static', filename='img/3.png') }}"></a></div>
+            </div>
+
+        </div>
 
 
-</div>
-</body>
-</html>
+
+
+
+{% endblock %}
