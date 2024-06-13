@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Guest List Form</h1>
+
+    <form method="POST" action="/guests">
+        <div class="form-group">
+            <label for="nickname"> Your nickname</label>
+            <input type="text" class="form-control" id="nickname" placeholder="Nickname" name="nickname">
+        </div>
+
+        <div class="form-group">
+            <label for="text">Your text:</label>
+            <textarea class="form-control" id="text" rows="3" name="text"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div>
+        <div style="margin-top: 10vh;">
+            {% for guest in guests %}
+                <p>
+                    <strong>{{ guest.name }}</strong>: {{ guest.text }}
+                    <span class="text-muted ml-2">{{ guest.created_at }}</span>
+                <form method="POST" action="/guests/edit/{{ guest.id }}" style="display: inline-block;">
+                    <button type="submit" class="btn btn-secondary bg-warning float-right ml-2" name="edit_btn"
+                            value="{{ guest.id }}">Edit
+                    </button>
+                </form>
+                <form method="POST" action="/guests/delete/{{ guest.id }}" style="display: inline-block;">
+                    <button type="submit" class="btn btn-secondary bg-danger float-right" name="delete_btn"
+                            value="{{ guest.id }}">Delete
+                    </button>
+                </form>
+                </p>
+            {% else %}
+                <p>No guest entries found.</p>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,5 @@
+AZDBSERVER = 'daniil.database.windows.net'
+AZDBNAME = 'testdaniil'
+AZDBUSER = 'daniil'
+AZDBPW = 'Mazurenko_2204'
+AZDBDRIVER = '{ODBC Driver 18 for SQL Server}'
